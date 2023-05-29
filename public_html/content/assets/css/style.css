@@ -43,3 +43,22 @@ input[type=number] {
 .registration-form input {
 	margin-bottom: 20px;
 }
+
+.registration-message {
+	border-radius: 5px;
+	border: 1px solid;
+	padding: 10px 8px;
+}
+
+.registration-message-succsess {
+	border-color: #2ea44f;
+}
+
+.registration-message-error {
+	border-color: orange;
+}
+
+.admin-page-content {
+	min-height: 100vh;
+	margin-left: 160px;
+}

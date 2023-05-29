@@ -5,6 +5,8 @@
  */
 class User
 {
+	public $data;
+	
 	public $ID = 0;
 
 	public $caps = array();

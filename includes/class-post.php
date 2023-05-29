@@ -2,6 +2,7 @@
 /**
  * 
  */
+#[AllowDynamicProperties]
 class Post
 {
 
@@ -88,10 +89,34 @@ class Post
 	 * @var string
 	 */
 	public $post_type = 'post';
+
+	public static function get_instance( $post_id ) {
+		global $wpdb;
+
+		$post_id = (int) $post_id;
+		if ( ! $post_id ) {
+			return false;
+		}
+
+		$_post = $wpdb->get_results("SELECT * FROM `posts` WHERE `ID` = '{$post_id}' LIMIT 1", ARRAY_A);
+
+		return $_post;
+	}
 	
 	public function __construct( $post ) {
 		foreach ( get_object_vars( $post ) as $key => $value ) {
 			$this->$key = $value;
 		}
 	}
+
+	public function __set( $name, $value ) {
+		$this->$name = $value;
+	}
+
+	public function __get( $name ) {
+		if ( isset($this->name) ) {
+			return $this->$name;
+		}
+	}
+
 }

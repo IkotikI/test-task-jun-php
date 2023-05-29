@@ -6,15 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-// if ( ! defined( 'PUBPATH' ) ) {
-// 	define( 'PBPATH', __DIR__ . '../public_html/' );
-// }
+session_start();
 
-// if ( ! defined( 'INCPATH' ) ) {
-// 	define( 'INCPATH', __DIR__ . '/' );
-// }
-// echo PUBPATH;
 require_once PUBPATH . '/config.php';
+
 
 function require_db() {
 	global $db;
