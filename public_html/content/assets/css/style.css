@@ -1,0 +1,45 @@
+/* Header */
+.header {
+	height: 60px;
+	display: flex;
+}
+
+.header > .nav {
+	display: flex;
+	width: 100%;
+}
+
+.nav-item {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.registration {
+	display: flex;
+}
+.registration-form {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Registration and Login pages */
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
+	padding: 10px 20px;
+	border: 1px solid #777;
+	border-radius: 6px;
+}
+
+.btn {
+	padding: 10px 20px;
+	border: none;
+	background: #2ea44f;
+}
+
+.registration-form input {
+	margin-bottom: 20px;
+}
