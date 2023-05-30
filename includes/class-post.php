@@ -100,7 +100,7 @@ class Post
 
 		$_post = $wpdb->get_results("SELECT * FROM `posts` WHERE `ID` = '{$post_id}' LIMIT 1", ARRAY_A);
 
-		return $_post;
+		return new Post($_post);
 	}
 	
 	public function __construct( $post ) {

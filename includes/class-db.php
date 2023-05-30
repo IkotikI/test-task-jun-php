@@ -124,8 +124,8 @@ class DB
 
 	}
 
-	public function get_row( $query ) {
-		
+	public function get_row( $query ) {	
+
 	}
 
 	public function get_results( $query = null, $structure = OBJECT ) {

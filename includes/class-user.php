@@ -17,4 +17,9 @@ class User
 	{
 		// code...
 	}
+
+	public static function get_data_by( $field, $value ) {
+		global $db;
+	}
+
 }

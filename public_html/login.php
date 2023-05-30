@@ -39,9 +39,11 @@ if ( isset( $_POST['action'] ) && $_POST['action'] == 'login' ) {
 
 get_header();
 
+echo '<pre style="display: none">';
 print_r($_POST);
 print_r($result);
 print_r( ($_SESSION['message']) ?? 'No message' );
+echo '</pre>';
 ?>
 	<h1>Log In</h1>
 	<div class="pages">

@@ -1,7 +1,7 @@
 <?php
 
 function get_server_base_uri() {
-	return $_SERVER['HTTP_HOST'];
+	return 'http://' . $_SERVER['HTTP_HOST'];
 }
 
 

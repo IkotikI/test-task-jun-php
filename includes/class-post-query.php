@@ -29,7 +29,7 @@ class Post_Query
 	public function query( $query ) {
 
 		$this->query = $query;
-		$this->get_posts();
+		$this->posts = $this->get_posts();
 	}
 
 	public function get_posts() {
@@ -47,15 +47,20 @@ class Post_Query
 
 		$sql = "SELECT * FROM `posts` WHERE {$post_type} AND {$post_status} {$limit}";
 
+	//	echo $sql . PHP_EOL;
 		$results = $db->get_results($sql, ARRAY_A);
 
+		
+	//	print_r($results);
+		return $results;
+/*
 		$posts = array();
 		if ( ! empty( $results ) ) {
 			foreach ($results as $res) {
-				$posts[] = new Post($res);
+				$posts[] = Post::get_instance($res);
 			}
 		}
 
-		return $posts;
+		return $posts;*/
 	}
 }

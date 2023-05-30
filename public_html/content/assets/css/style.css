@@ -61,4 +61,5 @@ input[type=number] {
 .admin-page-content {
 	min-height: 100vh;
 	margin-left: 160px;
+	padding-left: 20px;
 }
